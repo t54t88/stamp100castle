@@ -7,7 +7,7 @@ ios_app_country                           : jp                                  
 
 appstore_link                             :                                           # Automatically populates if not set and if iOS app ID is set. Otherwise enter manually.
 playstore_link                            :                                           # Enter Google Play Store URL.
-presskit_download_link                    : https://emilbaehr.com                                          # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file). 
+# presskit_download_link                    : https://emilbaehr.com                                          # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file). 
                                                                                       # Or upload your press kit file to assets and set path accordingly (e.g. "assets/your_press_kit.zip").
 
 app_icon                                  : assets/appIcon.png                     # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
@@ -20,7 +20,7 @@ enable_smart_app_banner                   : true                                
 
 
 # Information About Yourself
-your_name                                 : t54t
+your_name                                 : t_54t
 your_link                                 : https://github.com/t54t88
 your_city                                 : Tokyo
 email_address                             :
@@ -41,7 +41,7 @@ features                                  :
     fontawesome_icon_name                 : stamp
     
   - title                                 : 100名城の情報もここに集約
-    description                           : 城の詳細画面からは、スタンプ設置場所や所在地の情報を簡単に得ることができます
+    description                           : 城の詳細画面からは、スタンプ設置場所や所在地などの情報を簡単に得ることができます
     fontawesome_icon_name                 : lightbulb
 
   - title                                 : かんたんに記録ができる
