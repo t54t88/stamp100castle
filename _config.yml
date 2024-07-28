@@ -40,13 +40,13 @@ features                                  :
     description                           : スタンプラリーの状況を管理するだけに特化したシンプルなアプリです
     fontawesome_icon_name                 : stamp
     
-  - title                                 : いまの状況がひと目でわかる
-    description                           : 全国／地域別で現在の状況が
+  - title                                 : 100名城の情報もここに集約
+    description                           : 城の詳細画面からは、スタンプ設置場所や所在地の情報を簡単に得ることができます
     fontawesome_icon_name                 : lightbulb
 
   - title                                 : かんたんに記録ができる
     description                           : スタンプの記録は簡単3ステップで複雑な操作はいりません
-    fontawesome_icon_name                 : pen-to-square
+    fontawesome_icon_name                 : pen-nib
 
   - title                                 : # New Feature Title
     description                           : # New Feature Description
