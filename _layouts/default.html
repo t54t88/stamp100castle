@@ -54,9 +54,9 @@
                         </div>
                         <div class="downloadButtonsContainer">
                             {% if t.playstore_link %}
-                                <a class="playStoreLink" href="{{ t.playstore_link }}"><img class="playStore" src="assets/playstore.png"></a>
+                                <a class="playStoreLink" href="{{ t.playstore_link }}"><img class="playStore" src="{{ 'assets/playstore.png' | relative_url }}"></a>
                             {% endif %}
-                            <a class="appStoreLink" href="{{ t.appstore_link }}"><img class="appStore" src="assets/appstore.png"></a>
+                            <a class="appStoreLink" href="{{ t.appstore_link }}"><img class="appStore" src="{{ 'assets/appstore.png' | relative_url }}"></a>
                         </div>
                     </div>
                     {% include features.html %}
