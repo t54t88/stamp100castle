@@ -1,0 +1,70 @@
+# Translations for each language.
+# Accessed in templates via:  {% assign t = site.data.i18n[lang] %}
+# Japanese pages live at "/" and English pages at "/en/".
+
+ja:
+  html_lang: ja
+  ios_app_country: jp
+  page_title: ""
+  app_name: 日本100名城 スタンプ管理アプリ
+  app_price: 無料
+  app_description: 日本100名城＆続100名城スタンプラリーの進捗を簡単に管理
+  appstore_link: https://apps.apple.com/jp/app/%E6%97%A5%E6%9C%AC100%E5%90%8D%E5%9F%8E%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%97%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA/id6670339907
+  playstore_link: https://play.google.com/store/apps/details?id=com.tsuka54lab.hyakumeijo
+  footer_made_by: Made by
+  footer_in: in
+  features:
+    - title: とてもシンプル
+      description: スタンプラリーの状況を管理するだけに特化したシンプルなアプリです
+      fontawesome_icon_name: stamp
+    - title: 100名城の情報もここに集約
+      description: 城の詳細画面からは、スタンプ設置場所や所在地などの情報を簡単に得ることができます
+      fontawesome_icon_name: lightbulb
+    - title: かんたんに記録ができる
+      description: スタンプの記録は簡単3ステップで複雑な操作はいりません
+      fontawesome_icon_name: pen-nib
+    - title: 地図で進捗をひとめで確認
+      description: 日本地図上で都道府県ごとの達成状況が色分けで見えるから、次に行く場所も決めやすい
+      fontawesome_icon_name: map-location-dot
+    - title: 進捗を可視化
+      description: 全体・地域別の達成率をグラフで表示。どこまで巡ったかが一目でわかります
+      fontawesome_icon_name: chart-pie
+    - title: データをバックアップ
+      description: 大切な訪問記録や写真をクラウドに保存できるから、機種変更のときも安心です
+      fontawesome_icon_name: cloud-arrow-up
+
+en:
+  html_lang: en-us
+  ios_app_country: us
+  page_title: "Japan's 100 Great Castles — Stamp Rally Tracker App"
+  app_name: Japan's 100 Great Castles
+  app_price: Free
+  app_description: Easily track your progress on the Japan 100 Great Castles & Next 100 Great Castles stamp rally
+  appstore_link: https://apps.apple.com/us/app/japans-100-great-castles/id6670339907
+  playstore_link: https://play.google.com/store/apps/details?id=com.tsuka54lab.hyakumeijo
+  footer_made_by: Made by
+  footer_in: in
+  features:
+    - title: Refreshingly Simple
+      description: A focused app built solely for tracking your castle stamp rally progress
+      fontawesome_icon_name: stamp
+    - title: All Castle Info in One Place
+      description: From each castle's detail screen, easily find stamp locations, addresses, and other useful information
+      fontawesome_icon_name: lightbulb
+    - title: Easy Record Keeping
+      description: Logging a stamp takes just three simple steps — no complicated operations required
+      fontawesome_icon_name: pen-nib
+    - title: Progress at a Glance on the Map
+      description: See your achievement color-coded by prefecture on a map of Japan, making it easy to decide where to go next
+      fontawesome_icon_name: map-location-dot
+    - title: Visualize Your Progress
+      description: View overall and regional completion rates as charts, so you can see how far you've traveled at a glance
+      fontawesome_icon_name: chart-pie
+    - title: Back Up Your Data
+      description: Save your precious visit records and photos to the cloud, so you're covered even when you switch devices
+      fontawesome_icon_name: cloud-arrow-up
+
+# UI strings shared by the language switcher
+nav:
+  ja_label: 日本語
+  en_label: English

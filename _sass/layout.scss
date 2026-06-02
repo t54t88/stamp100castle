@@ -222,6 +222,37 @@ nav > ul li a:active {
 }
 
 
+// Language Switcher
+.langSwitch a:link,
+.langSwitch a:visited {
+	color: rgba($header-title-color, 0.6);
+}
+
+.langSwitch a.langActive {
+	color: rgba($header-title-color, 1);
+	font-weight: 700;
+	cursor: default;
+}
+
+.langSep {
+	color: rgba($header-title-color, 0.4);
+	padding: 0 6px;
+}
+
+.subPageHeaderBackground .langSwitch a:link,
+.subPageHeaderBackground .langSwitch a:visited {
+	color: rgba(#000, 0.6);
+}
+
+.subPageHeaderBackground .langSwitch a.langActive {
+	color: rgba(#000, 1);
+}
+
+.subPageHeaderBackground .langSep {
+	color: rgba(#000, 0.4);
+}
+
+
 
 // Sub Page Header Styling
 .subPageHeaderBackground .logo > p {

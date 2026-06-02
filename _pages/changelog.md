@@ -1,6 +1,9 @@
 ---
 layout: page
-title: What's New
+title: 更新履歴
+lang: ja
+ja_url: /changelog/
+en_url: /en/changelog/
 include_in_header: true
 ---
 

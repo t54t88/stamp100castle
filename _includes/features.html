@@ -1,6 +1,8 @@
+{% assign lang = page.lang | default: 'ja' %}
+{% assign t = site.data.i18n[lang] %}
 <div class="features">
 
-    {% for feature in site.features %}
+    {% for feature in t.features %}
 
     {% if feature.title %}
     <div class="feature">

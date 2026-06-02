@@ -1,5 +1,7 @@
+{% assign lang = page.lang | default: 'ja' %}
+{% assign t = site.data.i18n[lang] %}
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="{{ t.html_lang }}">
 
 {% include head.html %}
 
@@ -39,22 +41,22 @@
                         </div>
                         <div class="appNamePriceContainer">
                             <h1 class="appName">
-                                {{ site.app_name }}
+                                {{ t.app_name }}
                             </h1>
                             <h2 class="appPrice">
-                                {{ site.app_price }}
+                                {{ t.app_price }}
                             </h2>
                         </div>
                         <div class="appDescriptionContainer">
                             <p class ="appDescription">
-                                {{ site.app_description }}
+                                {{ t.app_description }}
                             </p>
                         </div>
                         <div class="downloadButtonsContainer">
-                            {% if site.playstore_link %}
-                                <a class="playStoreLink" href="{{site.playstore_link}}"><img class="playStore" src="assets/playstore.png"></a>
+                            {% if t.playstore_link %}
+                                <a class="playStoreLink" href="{{ t.playstore_link }}"><img class="playStore" src="assets/playstore.png"></a>
                             {% endif %}
-                            <a class="appStoreLink" href="{{site.appstore_link}}"><img class="appStore" src="assets/appstore.png"></a>
+                            <a class="appStoreLink" href="{{ t.appstore_link }}"><img class="appStore" src="assets/appstore.png"></a>
                         </div>
                     </div>
                     {% include features.html %}
