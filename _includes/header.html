@@ -35,11 +35,12 @@
 	<div class="langSwitch">
 		<details class="langMenu">
 			<summary>
-				{% if lang == 'ja' %}{{ n.ja_flag }}&nbsp;{{ n.ja_short }}{% else %}{{ n.en_flag }}&nbsp;{{ n.en_short }}{% endif %}
+				<svg class="langGlobe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.6 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3z"/></svg>
+				<span>{% if lang == 'ja' %}{{ n.ja_short }}{% else %}{{ n.en_short }}{% endif %}</span>
 			</summary>
 			<ul class="langMenuList">
-				<li><a href="{{ page.ja_url | default: '/' | relative_url }}"{% if lang == 'ja' %} class="langActive"{% endif %} target="_self">{{ n.ja_flag }}&nbsp;&nbsp;{{ n.ja_label }}</a></li>
-				<li><a href="{{ page.en_url | default: '/en/' | relative_url }}"{% if lang == 'en' %} class="langActive"{% endif %} target="_self">{{ n.en_flag }}&nbsp;&nbsp;{{ n.en_label }}</a></li>
+				<li><a href="{{ page.ja_url | default: '/' | relative_url }}"{% if lang == 'ja' %} class="langActive"{% endif %} target="_self">{{ n.ja_label }}</a></li>
+				<li><a href="{{ page.en_url | default: '/en/' | relative_url }}"{% if lang == 'en' %} class="langActive"{% endif %} target="_self">{{ n.en_label }}</a></li>
 			</ul>
 		</details>
 	</div>

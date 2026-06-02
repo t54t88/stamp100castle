@@ -68,9 +68,7 @@ en:
 
 # UI strings shared by the language switcher
 nav:
-  ja_flag: "🇯🇵"
   ja_short: "JP"
   ja_label: "日本語"
-  en_flag: "🇺🇸"
   en_short: "EN"
   en_label: "English"
