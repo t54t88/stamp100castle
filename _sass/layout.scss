@@ -261,6 +261,14 @@ nav > ul li a:active {
 	display: none;
 }
 
+.langGlobe {
+	width: 17px;
+	height: 17px;
+	margin-right: 6px;
+	flex: 0 0 auto;
+	display: block;
+}
+
 .langMenu > summary::after {
 	content: "\25BE"; // ▾
 	font-size: 0.85em;
