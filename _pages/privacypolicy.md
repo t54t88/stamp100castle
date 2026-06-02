@@ -1,6 +1,9 @@
 ---
 layout: page
-title: Privacy Policy
+title: プライバシーポリシー
+lang: ja
+ja_url: /privacypolicy/
+en_url: /en/privacypolicy/
 include_in_header: false
 ---
 

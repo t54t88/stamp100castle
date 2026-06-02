@@ -1,6 +1,8 @@
+{% assign lang = page.lang | default: 'ja' %}
+{% assign t = site.data.i18n[lang] %}
 <footer>
 	{% if site.your_name %}
-	<p class="footerText">Made by {% if site.your_link %}<a href="{{ site.your_link }}">{% endif %}{{ site.your_name }}{% if site.your_link %}</a>{% endif %}{% if site.your_city %} in {{ site.your_city }}{% endif %}</p>
+	<p class="footerText">{{ t.footer_made_by }} {% if site.your_link %}<a href="{{ site.your_link }}">{% endif %}{{ site.your_name }}{% if site.your_link %}</a>{% endif %}{% if site.your_city %} {{ t.footer_in }} {{ site.your_city }}{% endif %}</p>
 	{% endif %}
 	<div class="footerIcons">
 
@@ -78,8 +80,10 @@
 
 	</div>
 	<div class="footerLinks">
-		{% for page in site.pages %}
-			<a href="{{ page.url | relative_url }}" target="_self">{{ page.title }}</a>
+		{% for nav_page in site.pages %}
+			{% if nav_page.lang == lang %}
+			<a href="{{ nav_page.url | relative_url }}" target="_self">{{ nav_page.title }}</a>
+			{% endif %}
 		{% endfor %}
 		{% if site.presskit_download_link %}
 			<a href="{{ site.presskit_download_link }}">Press Kit</a>
