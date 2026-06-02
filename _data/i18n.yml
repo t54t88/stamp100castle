@@ -9,6 +9,7 @@ ja:
   app_name: 日本100名城 スタンプ管理アプリ
   app_price: 無料
   app_description: 日本100名城＆続100名城スタンプラリーの進捗を簡単に管理
+  screenshot: assets/screenshot/screenshot.png
   appstore_link: https://apps.apple.com/jp/app/%E6%97%A5%E6%9C%AC100%E5%90%8D%E5%9F%8E%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%97%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA/id6670339907
   playstore_link: https://play.google.com/store/apps/details?id=com.tsuka54lab.hyakumeijo
   footer_made_by: Made by
@@ -40,6 +41,7 @@ en:
   app_name: Japan's 100 Great Castles
   app_price: Free
   app_description: Easily track your progress on the Japan 100 Great Castles & Next 100 Great Castles stamp rally
+  screenshot: assets/screenshot/screenshot_en.png
   appstore_link: https://apps.apple.com/us/app/japans-100-great-castles/id6670339907
   playstore_link: https://play.google.com/store/apps/details?id=com.tsuka54lab.hyakumeijo
   footer_made_by: Made by
@@ -66,5 +68,9 @@ en:
 
 # UI strings shared by the language switcher
 nav:
-  ja_label: 日本語
-  en_label: English
+  ja_flag: "🇯🇵"
+  ja_short: "JP"
+  ja_label: "日本語"
+  en_flag: "🇺🇸"
+  en_short: "EN"
+  en_label: "English"

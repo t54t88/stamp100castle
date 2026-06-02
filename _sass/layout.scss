@@ -151,6 +151,7 @@ header {
 .scroll {
 	display: flex;
 	width: 100%;
+	min-width: 0; // allow the nav to shrink so the language switcher stays on-screen
 	align-items: center;
 	justify-content: flex-end;
 
@@ -222,34 +223,105 @@ nav > ul li a:active {
 }
 
 
-// Language Switcher
-.langSwitch a:link,
-.langSwitch a:visited {
-	color: rgba($header-title-color, 0.6);
+// Language Switcher (dropdown)
+.langSwitch {
+	display: flex;
+	align-items: center;
+	height: 115px;
+	margin-left: 20px;
+	flex: 0 0 auto;
 }
 
-.langSwitch a.langActive {
+@media only screen and (max-width: 768px) {
+	.langSwitch {
+		height: 80px;
+		margin-left: 12px;
+	}
+}
+
+.langMenu {
+	position: relative;
+}
+
+.langMenu > summary {
+	list-style: none;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	white-space: nowrap;
+	padding: 6px 10px;
+	border-radius: 8px;
+	border: 1px solid rgba($header-title-color, 0.35);
+	color: rgba($header-title-color, 0.85);
+	user-select: none;
+	transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.langMenu > summary::-webkit-details-marker {
+	display: none;
+}
+
+.langMenu > summary::after {
+	content: "\25BE"; // ▾
+	font-size: 0.85em;
+	margin-left: 6px;
+	opacity: 0.8;
+}
+
+.langMenu > summary:hover,
+.langMenu[open] > summary {
 	color: rgba($header-title-color, 1);
+	border-color: rgba($header-title-color, 0.8);
+}
+
+.langMenuList {
+	position: absolute;
+	top: calc(100% + 8px);
+	right: 0;
+	min-width: 150px;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+	padding: 6px;
+	list-style: none;
+	z-index: 200;
+}
+
+.langMenuList li {
+	padding: 0;
+}
+
+.langMenuList li a:link,
+.langMenuList li a:visited {
+	display: block;
+	padding: 9px 14px;
+	border-radius: 8px;
+	color: #333;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.langMenuList li a:hover,
+.langMenuList li a:active {
+	background: rgba(0, 0, 0, 0.05);
+	color: #000;
+}
+
+.langMenuList li a.langActive {
 	font-weight: 700;
-	cursor: default;
+	color: #000;
 }
 
-.langSep {
-	color: rgba($header-title-color, 0.4);
-	padding: 0 6px;
+// Sub Page (light header) variant
+.subPageHeaderBackground .langMenu > summary {
+	border-color: rgba(#000, 0.25);
+	color: rgba(#000, 0.75);
 }
 
-.subPageHeaderBackground .langSwitch a:link,
-.subPageHeaderBackground .langSwitch a:visited {
-	color: rgba(#000, 0.6);
-}
-
-.subPageHeaderBackground .langSwitch a.langActive {
-	color: rgba(#000, 1);
-}
-
-.subPageHeaderBackground .langSep {
-	color: rgba(#000, 0.4);
+.subPageHeaderBackground .langMenu > summary:hover,
+.subPageHeaderBackground .langMenu[open] > summary {
+	color: #000;
+	border-color: rgba(#000, 0.55);
 }
 
 

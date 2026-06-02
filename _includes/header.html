@@ -29,9 +29,27 @@
 			{% if site.presskit_download_link %}
 				<li><a href="{{ site.presskit_download_link }}">Press Kit</a></li>
 			{% endif %}
-			<li class="langSwitch">
-				<a href="{{ page.ja_url | default: '/' | relative_url }}" class="{% if lang == 'ja' %}langActive{% endif %}" target="_self">{{ site.data.i18n.nav.ja_label }}</a><span class="langSep">/</span><a href="{{ page.en_url | default: '/en/' | relative_url }}" class="{% if lang == 'en' %}langActive{% endif %}" target="_self">{{ site.data.i18n.nav.en_label }}</a>
-			</li>
 		</ul>
 	</nav>
+	{% assign n = site.data.i18n.nav %}
+	<div class="langSwitch">
+		<details class="langMenu">
+			<summary>
+				{% if lang == 'ja' %}{{ n.ja_flag }}&nbsp;{{ n.ja_short }}{% else %}{{ n.en_flag }}&nbsp;{{ n.en_short }}{% endif %}
+			</summary>
+			<ul class="langMenuList">
+				<li><a href="{{ page.ja_url | default: '/' | relative_url }}"{% if lang == 'ja' %} class="langActive"{% endif %} target="_self">{{ n.ja_flag }}&nbsp;&nbsp;{{ n.ja_label }}</a></li>
+				<li><a href="{{ page.en_url | default: '/en/' | relative_url }}"{% if lang == 'en' %} class="langActive"{% endif %} target="_self">{{ n.en_flag }}&nbsp;&nbsp;{{ n.en_label }}</a></li>
+			</ul>
+		</details>
+	</div>
 </header>
+<script>
+	// Close the language dropdown when clicking outside of it.
+	document.addEventListener('click', function (e) {
+		var menu = document.querySelector('.langMenu[open]');
+		if (menu && !menu.contains(e.target)) {
+			menu.removeAttribute('open');
+		}
+	});
+</script>
