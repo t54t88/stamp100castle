@@ -17,7 +17,9 @@
 	{% endif %}
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" crossorigin="anonymous">
-	<link rel="stylesheet" href="{{ '/main.css' | relative_url }}">
+	{% comment %} Cache-bust main.css on every deploy so CSS changes are never served stale from cache (it is sent with max-age=14400). {% endcomment %}
+	{% if site.github.build_revision %}{% assign css_ver = site.github.build_revision %}{% else %}{% assign css_ver = site.time | date: '%s' %}{% endif %}
+	<link rel="stylesheet" href="{{ '/main.css' | relative_url }}?v={{ css_ver }}">
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9P2Z6G7V01"></script>
