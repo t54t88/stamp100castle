@@ -59,7 +59,7 @@ cover_image: assets/himeji.png # Replace with alternative image path or image UR
 cover_overlay_color: "#2a3d1a"
 cover_overlay_transparency: 0.7
 
-device_color: black # Set to: blue, black, yellow, coral or white.
+device_color: iPhone17_Black # Apple公式モックアップ（Dynamic Island）。別色を使う場合は assets/ に同形式のPNGを置いてファイル名を指定。
 
 body_background_color: "#ffffff"
 
